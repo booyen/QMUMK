@@ -8,12 +8,12 @@
 
 <div id="patient-report" class="container page">
 <div class="panel panel-default">
-<div class="panel-heading theme-patients"><span class="inlineicon patients-mini">Patient Report</span></div>
+<div class="panel-heading theme-patients"><span class="inlineicon patients-mini">Laporan pesakit</span></div>
 <div class="panel-body">
 <ol class="breadcrumb link-patients">
-  <li><a href="../dashboard"><i class="glyphicon glyphicon-home"></i>Home</a></li>
-  <li><a href="../patients/">Patients</a></li>
-  <li class="active">Patient Report</li>
+  <li><a href="../dashboard"><i class="glyphicon glyphicon-home"></i>Laman Utama</a></li>
+  <li><a href="../patients/">Pesakit</a></li>
+  <li class="active">Laporan pesakit</li>
 </ol>
 
 	<?php 
