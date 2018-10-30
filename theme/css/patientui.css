@@ -1,0 +1,200 @@
+/* Patient GUI style
+by Shahril aidi b. Mohamad
+*/
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+body {
+  font-family: "Exo", sans-serif !important;
+}
+
+.header {
+  background-color: #000;
+}
+.iklan-pesakit {
+  background-color: #b8b8b8;
+  width: 366px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  text-align: center;
+  height: 100vh;
+  min-height: 100vh !important;
+}
+.fixed {
+  position: fixed !important;
+  width: 40% !important;
+}
+.scrollit {
+  margin-left: 515px !important;
+  width: 41%;
+  padding-right: 0px !important;
+}
+
+.carousel,
+.item,
+.active {
+  height: 100%;
+}
+.carousel-inner {
+  height: 100%;
+}
+
+.fill {
+  width: 100%;
+  background-position: center;
+}
+
+.bahagian-utama {
+  height: 100vh;
+  width: 100%;
+  padding: 0px !important;
+  background-color: rgba(255, 255, 255, 0.792);
+}
+.section-atas {
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  vertical-align: top;
+}
+.date {
+  float: right;
+  color: rgb(226, 140, 28);
+  font-weight: 900;
+  padding-top: 50px !important;
+  padding-right: 50px;
+
+  vertical-align: bottom;
+  display: flex;
+}
+.material-icons {
+  display: inline-flex;
+  vertical-align: top;
+  padding-right: 15px;
+}
+
+.lokasi {
+  color: #000;
+  float: right;
+  vertical-align: bottom;
+  display: flex;
+}
+.logo {
+  width: 150px;
+  height: 45px;
+}
+.lokasi > i {
+  color: #ff4141;
+  top: 5px;
+}
+.material-icons {
+  top: 5px;
+}
+
+.pengumuman {
+  padding-top: 50px;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+}
+.main-btn {
+  margin-top: 80px !important;
+}
+
+.pesakit1 {
+  color: rgb(46, 46, 46);
+  border-radius: 20px !important;
+}
+.pesakit2 {
+  background-color: #989898;
+  color: #fff;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.header-menu {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: inline;
+}
+
+.pesakit1:hover {
+  background-color: #909090;
+}
+.form-borang {
+  margin-top: 90px;
+}
+
+.pesakit2 {
+  background-color: rgb(50, 218, 230) !important;
+  color: #fff;
+  border: none;
+}
+.card-base > .card-icon {
+  text-align: left;
+
+  position: relative;
+}
+.icon-pesakit {
+  width: 150px;
+  height: 150px;
+  background-image: url();
+}
+.imagecard {
+  z-index: 2;
+  display: block;
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  color: white;
+}
+.card-base > .card-icon > .card-data {
+  min-height: 250px !important;
+  margin-top: -24px;
+  background: ghostwhite;
+  border: 1px solid #e0e0e0;
+  padding: 15px 0 10px 0;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  min-height: 215px;
+}
+#widgetCardIcon {
+  background: #bb7824 !important;
+  font-size: 28px;
+  line-height: 78px;
+}
+.icon-menu {
+  width: 60px;
+  height: 60px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.card-text {
+  margin-top: -15px;
+  font-weight: 300;
+}
+.card-title {
+  font-weight: 600;
+}
+.card-text-main {
+  margin-top: 45px;
+}
+.card {
+  margin-bottom: 30px;
+  border: none !important;
+  box-shadow: 0px 13px 21px -15px rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(179, 179, 179, 0.2);
+  background-color: #f3f3f3;
+}
