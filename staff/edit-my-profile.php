@@ -6,14 +6,14 @@
 
 <div id="staff-edit-my-porfile" class="container page">
 <div class="panel panel-default">
-<div class="panel-heading theme-staff"><span class="inlineicon edit-mini">Edit Profile</span></div>
+<div class="panel-heading theme-staff"><span class="inlineicon edit-mini">Sunting profile</span></div>
 <div class="panel-body">
 <ol class="breadcrumb link-staff">
-  <li><a href="../dashboard">Home</a></li>
+  <li><a href="../dashboard">Laman Utama</a></li>
    <i class="material-icons bread-icon">navigate_next</i> 
-  <li><a href="../staff/">Staff Members</a></li>
+  <li><a href="../staff/">Staff</a></li>
    <i class="material-icons bread-icon">navigate_next</i> 
-  <li class="active">Edit Profile</li>
+  <li class="active">Sunting profile</li>
 </ol>
 
 <?php
@@ -56,18 +56,18 @@ if(isset($_POST['submit'])){
 	<div class="form-group"><label>Title:</label><select class="form-control" name='title'  id='title' size='1' tabindex='1'>
             <option value='<?php echo staff_info("title",staff_info('id'));?>'><?php echo staff_info("title");?> (Current)</option>
             <option value='Dr.'>Dr.</option>
-            <option value='Mr.'>Mr.</option>
-            <option value='Miss.'>Miss.</option>
-            <option value='Mrs.'>Mrs. </option>
+            <option value='Mr.'>Encik.</option>
+            <option value='Miss.'>Cik.</option>
+            <option value='Mrs.'>Puan. </option>
     </select></div>
-	<div class="form-group"><label>First Name:</label><input class="form-control" name="first_name" type="text" value="<?php echo staff_info("first_name");?>" /></div>
-	<div class="form-group"><label>Last Name:</label><input class="form-control" name="last_name" type="text" value="<?php echo staff_info("last_name");?>" /></div>
-	<div class="form-group"><label>New Password:</label><input class="form-control" name="passkey" type="text" /></div>
-	<div class="form-group"><label>Contact Number:</label><input class="form-control" name="contact" type="text" value="<?php echo staff_info("contact");?>"  /></div>
-	<div class="form-group"><label>Mobile Number:</label><input class="form-control" name="mobile" type="text" value="<?php echo staff_info("mobile");?>" /><i>Hidden from the staff with access level less than 4</i></div>
+	<div class="form-group"><label>Nama Pertama:</label><input class="form-control" name="first_name" type="text" value="<?php echo staff_info("first_name");?>" /></div>
+	<div class="form-group"><label>nama terakhir:</label><input class="form-control" name="last_name" type="text" value="<?php echo staff_info("last_name");?>" /></div>
+	<div class="form-group"><label>Password baru:</label><input class="form-control" name="passkey" type="text" /></div>
+	<div class="form-group"><label>No. untuk dihubungi:</label><input class="form-control" name="contact" type="text" value="<?php echo staff_info("contact");?>"  /></div>
+	<div class="form-group"><label>No.tel bimbit:</label><input class="form-control" name="mobile" type="text" value="<?php echo staff_info("mobile");?>" /><i>Hidden from the staff with access level less than 4</i></div>
 	<div class="form-group"><label>Skype:</label><input class="form-control" name="skype" type="text" value="<?php echo staff_info("skype");?>"  /></div>
-	<div class="form-group"><label>Personal Address:</label><input class="form-control" name="address" type="text" value="<?php echo staff_info("address");?>" /><i>Hidden from the staff with access level less than 4</i></div>
-    <div class="form-group"><label>Profile Photo:</label><input class="form-control" name="image" type="file" /></div> 
+	<div class="form-group"><label>Alamat peribadi:</label><input class="form-control" name="address" type="text" value="<?php echo staff_info("address");?>" /><i>Hidden from the staff with access level less than 4</i></div>
+    <div class="form-group"><label>Gambar profile:</label><input class="form-control" name="image" type="file" /></div> 
 	<input name="submit" class="btn btn-default formbutton theme-staff" name="submit" class="formbutton staff" type="submit" value="Update">
 </form>
 

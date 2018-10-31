@@ -14,14 +14,14 @@
 
 <div id="staff-edit-profile" class="container page">
 <div class="panel panel-default">
-<div class="panel-heading theme-staff"><span class="inlineicon edit-mini">Edit Profile</span></div>
+<div class="panel-heading theme-staff"><span class="inlineicon edit-mini">Sunting profile</span></div>
 <div class="panel-body">
 <ol class="breadcrumb link-staff">
-  <li><a href="../dashboard">Home</a></li>
+  <li><a href="../dashboard">Laman Utama</a></li>
    <i class="material-icons bread-icon">navigate_next</i> 
-  <li><a href="../staff/">Staff Members</a></li>
+  <li><a href="../staff/">Staff</a></li>
    <i class="material-icons bread-icon">navigate_next</i> 
-  <li class="active">Edit Profile</li>
+  <li class="active">Sunting profile</li>
 </ol>
 
 <?php
@@ -68,19 +68,19 @@ if(isset($_POST['submit'])){
 	<div class="form-group"><label>Title:</label><select class="form-control" name='title'  id='title' size='1' tabindex='1'>
             <option value='<?php echo "$profile->title";?>'><?php echo "$profile->title";?> (Current)</option>
             <option value='Dr.'>Dr.</option>
-            <option value='Mr.'>Mr.</option>
-            <option value='Miss.'>Miss.</option>
-            <option value='Mrs.'>Mrs. </option>
+            <option value='Mr.'>Encik.</option>
+            <option value='Miss.'>Cik.</option>
+            <option value='Mrs.'>Puan. </option>
             <option value='Nurse.'>Nurse. </option>
     </select></div>
-	<div class="form-group"><label>First Name:</label><input class="form-control" name="first_name" type="text" value="<?php echo "$profile->first_name";?>" /></div>
-	<div class="form-group"><label>Last Name:</label><input class="form-control" name="last_name" type="text" value="<?php echo "$profile->last_name";?>" /></div>
-	<div class="form-group"><label>New Password:</label><input class="form-control" name="passkey" type="text" /></div>
-	<div class="form-group"><label>Contact Number:</label><input class="form-control" name="contact" type="text" value="<?php echo "$profile->contact";?>"  /></div>
-	<div class="form-group"><label>Mobile Number:</label><input class="form-control" name="mobile" type="text" value="<?php echo "$profile->contact";?>" /><i>Hidden from the staff with access level less than 4</i></div>
+	<div class="form-group"><label>Nama Pertama:</label><input class="form-control" name="first_name" type="text" value="<?php echo "$profile->first_name";?>" /></div>
+	<div class="form-group"><label>nama terakhir:</label><input class="form-control" name="last_name" type="text" value="<?php echo "$profile->last_name";?>" /></div>
+	<div class="form-group"><label>Password baru:</label><input class="form-control" name="passkey" type="text" /></div>
+	<div class="form-group"><label>No. untuk dihubungi:</label><input class="form-control" name="contact" type="text" value="<?php echo "$profile->contact";?>"  /></div>
+	<div class="form-group"><label>No. Tel bimbit:</label><input class="form-control" name="mobile" type="text" value="<?php echo "$profile->contact";?>" /><i>Hidden from the staff with access level less than 4</i></div>
 	<div class="form-group"><label>Chat:</label><input class="form-control" class="form-control" name="skype" type="text" value="<?php echo "$profile->skype";?>"  /></div>
-	<div class="form-group"><label>Personal Address:</label><input class="form-control" name="address" type="text" value="<?php echo "$profile->address";?>" /><i>Hidden from the staff with access level less than 4</i></div>
-	<div class="form-group"><label>Access Level:</label><select class="form-control" name='access_level'  id='access_level' size='1' tabindex='1'>
+	<div class="form-group"><label>Alamat peribadi:</label><input class="form-control" name="address" type="text" value="<?php echo "$profile->address";?>" /><i>Hidden from the staff with access level less than 4</i></div>
+	<div class="form-group"><label>Tahap akses:</label><select class="form-control" name='access_level'  id='access_level' size='1' tabindex='1'>
             <option value='<?php echo "$profile->access_level";?>'><?php echo "$profile->access_level";?> (Current)</option>
             <option value='1'>1 - <?php echo access_level2rank(1);?></option>
             <option value='2'>2 - <?php echo access_level2rank(2);?></option>
@@ -90,11 +90,11 @@ if(isset($_POST['submit'])){
     </select></div>
 	<div class="form-group"><label>Status:</label><select class="form-control" name='status'  id='status' size='1' tabindex='1'>
             <option value='<?php echo "$profile->status";?>'><?php echo "$profile->status";?> (Current)</option>
-            <option value='active'>active</option>
-            <option value='blocked'>blocked</option>
+            <option value='active'>aktif</option>
+            <option value='blocked'>disekat</option>
 
     </select></div>    
-	<div class="form-group"><label>Branch:</label>
+	<div class="form-group"><label>Cawangan:</label>
 	<select class="form-control" name='branch'  id='branch' size='1' tabindex='1'>
 	<option value='<?php echo "$profile->branch";?>'><?php echo "$global_permission->guardian_short_name";?><?php echo "$profile->branch";?> (Current)</option>
 	<?php 
@@ -110,7 +110,7 @@ if(isset($_POST['submit'])){
 </form>
 
 <br>
-<div id="page-clear" align="center"><div id="deleteButton"><a class="delete-me" href="edit.php?id=<?php echo "$profile->id";?>&delete">Delete Profile</a></div></div>
+<div id="page-clear" align="center"><div id="deleteButton"><a class="delete-me" href="edit.php?id=<?php echo "$profile->id";?>&delete">Padam profile</a></div></div>
 
 <?php }?>
 

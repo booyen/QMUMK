@@ -6,16 +6,16 @@
 
 <div id="staff-directory" class="container page">
 <div class="panel panel-default">
-<div class="panel-heading theme-staff"><span class="inlineicon staff-mini">Staff Members</span></div>
+<div class="panel-heading theme-staff"><span class="inlineicon staff-mini">Staff</span></div>
 <div class="panel-body">
 <ol class="breadcrumb link-staff">
-  <li><a href="../dashboard">Home</a></li>
+  <li><a href="../dashboard">Laman utama</a></li>
    <i class="material-icons bread-icon">navigate_next</i> 
-  <li class="active">Staff Members</li>
+  <li class="active">Staff</li>
 </ol>
 
 	<?php if(isset($_GET['deleted'])){$deleted=$_GET['deleted'];?>
-    	<div class="alert alert-success" role="alert">Staff Profile has been deleted successfully!</div>
+    	<div class="alert alert-success" role="alert">Maklumat staf telah berjaya dipadam!</div>
 	<?php }?>
 
 

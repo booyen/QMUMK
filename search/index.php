@@ -34,7 +34,7 @@
 	<div class="pull-right"><?php echo staff_img("$staff[id]","80px");?></div>
 	<p><i class="glyphicon glyphicon-user"></i><span class="small_id_icon">ID# <?php echo $staff['id']?> — </span><span class="small_level_icon"><?php echo "$global_permission->guardian_short_name"; echo $staff['branch']?></span></p>
 	<p><i class="glyphicon glyphicon-home"></i><?php echo $staff['address']?></p>
-	<p><i class="glyphicon glyphicon-earphone"></i>Call: <?php echo $staff['contact']?></p>
+	<p><i class="glyphicon glyphicon-earphone"></i>No. Tel: <?php echo $staff['contact']?></p>
 	<p><i class="glyphicon glyphicon-facetime-video"></i>SKYPE: <?php echo $staff['skype']?></p>
 	</div></div>
 	</a>
@@ -94,7 +94,7 @@
 
 
 <?php } ?>
-<br><h4><?php echo "$count";?> Result(s) were found!</h4><br>
+<br><h4><?php echo "$count";?> Hasil carian dijumpai!!</h4><br>
 
 </div>
 </div> <!-- panel panel-default -->
