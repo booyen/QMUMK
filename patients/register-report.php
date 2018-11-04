@@ -21,7 +21,7 @@
   <i class="material-icons bread-icon">navigate_next</i> 
   <li><a href="../patients/register-patients.php">Pesakit baru</a></li>
   <i class="material-icons bread-icon">navigate_next</i> 
-  <li class="active">Laporan baru</li>
+  <li class="active">Kes baru</li>
 </ol>
 <?php
 
@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
 			}
 	
 	}else{
-	echo"<div class='alert alert-danger' role='alert'>Please fill out all required fields!</div>";	
+	echo"<div class='alert alert-danger' role='alert'>Sila isi semua ruangan kosong dibawah!</div>";	
 	echo"<input class='btn btn-default formbutton theme-patients' value='Try Again' onclick='window.history.back()'/>";
 	}
 
@@ -63,28 +63,28 @@ if(isset($_POST['submit'])){
     
     <table class="table table-striped link-patients"><tbody>
     <tr><td>Nama:</td><td><a href="../patients/profile.php?id=<?php echo patient_info("id",$id);?>" class="patient"><?php echo patient_info("name",$id);?></a></td></tr>
-    <tr><td>No.Pesakit:</td><td><?php echo patient_info("serial",$id);?>-<?php echo patient_info("id",$id);?></td></tr>
+    <tr><td>No. Siri Qmedic:</td><td><?php echo patient_info("kad_penga",$id);?>-<?php echo patient_info("id",$id);?></td></tr>
     <tr><td>Didaftarkan di:</td><td><?php echo $global_permission->guardian_short_name; echo patient_info("branch",$id);?> - <?php echo branch_name(patient_info("branch",$id));?></td></tr>
-     <tr><td>xDidaftarkan oleh/di:</td><td><a class="staff" href="../staff/profile<?php echo $extension;?>?id=<?php echo patient_info("physician",$id);?>"><?php echo staff_info("full_name",patient_info("physician",$id));?></a></td></tr>
+     <tr><td>Didaftarkan oleh:</td><td><a class="staff" href="../staff/profile<?php echo $extension;?>?id=<?php echo patient_info("physician",$id);?>"><?php echo staff_info("full_name",patient_info("physician",$id));?></a></td></tr>
     <tr><td>Kemaskini terakhir:</td><td><?php echo display_time(patient_info("last_update",$id));?></td></tr>
 	</tbody></table>
 
 <form method="post" action="" enctype="multipart/form-data">
-	<div class="form-group"><label>Kadar bayaran:</label><select class="form-control" name='charge' class="inputOne"  id='charge' size='1'>
+	<div class="form-group" ><label>Bayaran pendaftaran:</label><select class="form-control" name='charge' class="inputOne"  id='charge' size='1'>
 				<option value="a">Charge Mode A - <?php echo "$global_permission->currency"?> <?php echo charge_mode("a");?></option>
 				<option value="b">Charge Mode B - <?php echo "$global_permission->currency"?> <?php echo charge_mode("b");?></option>
 				<option value="c">Charge Mode C - <?php echo "$global_permission->currency"?> <?php echo charge_mode("c");?></option>>
-				<option value="d" selected="selected">Charge Mode D - <?php echo "$global_permission->currency"?> <?php echo charge_mode("d");?></option></select></div>
-	<div class="form-group"><label>Symptoms:</label><textarea class="form-control" name="symptoms" id="symptoms" class="inputOne" cols="9" rows="4"></textarea></div>
-	<div class="form-group"><label>Fever:</label><input class="form-control" name="fever" type="text" /><i>&deg;F</i></div>
-	<div class="form-group"><label>Blood Pressure:</label><input class="form-control" name="blood_pressure" type="text" /><i>Systolic BP mmHg / Diastolic BP mmHg</i></div>
+				<option value="d" selected="selected">TIDAK BERKENAAN - <?php echo "$global_permission->currency"?> <?php echo charge_mode("d");?></option></select></div>
+	<div class="form-group"><label>Simptom:</label><textarea class="form-control" name="symptoms" id="symptoms" class="inputOne" cols="9" rows="4"></textarea></div>
+	<div class="form-group"><label>Suhu:</label><input class="form-control" name="fever" type="text" /><i>&deg;F</i></div>
+	<div class="form-group"><label>Tekanan darah:</label><input class="form-control" name="blood_pressure" type="text" /><i></i></div>
 	<!--
 	<div class="form-group"><label>Upload(s):</label><input class="form-control" class="file" name="file" type="file" /><i>*zipped files only</i></div>
 	-->
 	<div class="form-group"><label>Ditugaskan kepada:</label><select class="form-control" name='engaged_by'  id='engaged_by' size='1' tabindex='1'>
 	<option value="">Open Ticket</option>
 	<?php if( display_permission('prescribe_patient',staff_info('id'))==true) { ?>
-	<option value="<?php echo staff_info('id');?>">Myself</option>
+	<option value="<?php echo staff_info('id');?>">Saya Sendiri</option>
 	<?php }?>
 	
 	<?php 

@@ -6,7 +6,7 @@
 
 <div id="new patient" class="container page col-md-offset-4">
 <div class="panel panel-default">
-<div class="panel-heading theme-patients"><span class="inlineicon edit-mini">New Patient</span></div>
+<div class="panel-heading theme-patients"><span class="inlineicon edit-mini">Pesakit Baru</span></div>
 <div class="panel-body">
 <ol class="breadcrumb link-patients">
  	<li>
@@ -23,16 +23,16 @@ if(isset($_POST['submit'])){
 
 	$gender=$_POST['gender'];
 	$age=$_POST['age'];
-	$serial=$_POST['serial'];
+	$kadp=$_POST['somenakad-pengenalan'];
 	$name=friendly($_POST['name']);
-	$contact=friendly($_POST['contact']);
+	$notel=friendly($_POST['notel']);
 	$email=friendly($_POST['email']);
-	$weight=friendly($_POST['weight']);
+	$bangsa=friendly($_POST['bangsa']);
 	$profession=friendly($_POST['profession']);
-	$ref_contact=friendly($_POST['ref_contact']);
-	$address=friendly($_POST['address']);
+	$ref_contact=friendly($_POST['refcontact']);
+	$nostafpel=friendly($_POST['nostafpel']);
 
-	$result=register_patient($gender,$age,$serial,$name,$contact,$email,$weight,$profession,$ref_contact,$address);
+	$result=register_patient($gender,$age,$kadp,$name,$notel,$email,$bangsa,$profession,$ref_contact,$nostafpel);
 
 	if($result==false){
 	echo"<div class='alert alert-danger' role='alert'>Please fill out all required fields!</div>";	
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
 		
 		<div class="form-group col-md-4">
 			<label>No. Kad pengenalan (MyKad):</label>
-				<input name="somenakad-penegnalan" id="kadpengenalan" class="form-control"
+				<input name="somenakad-pengenalan" id="kadpengenalan" class="form-control"
     			oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
    				 type = "number" maxlength = "12" />
 			</div>
@@ -79,8 +79,8 @@ if(isset($_POST['submit'])){
 		
 
 		<div class="form-group col-md-2">
-			<label>No. telefon:</label>
-				<input autocomplete="no" class="form-control" name="contact" type="number" />
+			<label>No. Telefon:</label>
+				<input autocomplete="no" class="form-control" name="notel" type="number" />
 		</div>
 	
 		<div class="form-group col-md-3">
@@ -90,16 +90,16 @@ if(isset($_POST['submit'])){
 		
 			<div class="form-group col-md-3">
 		<label>Kategori Pesakit:</label>
-			<select name='gender' class="form-control"  id='gender'  >
-				<option value='Lelaki'>Pelajar</option>
-				<option value='Perempuan'>Staff</option>
-				<option value='Perempuan'>Tanggungan Staff</option>
+			<select name='profession' class="form-control"  id='gender'  >
+				<option value='Pelajar'>Pelajar</option>
+				<option value='Staff'>Staff</option>
+				<option value='Tanggungan Staff'>Tanggungan Staff</option>
 			</select>
 	</div>
 
 	<div class="form-group col-md-4">
 			<label>No. Staff/Pelajar UMK:</label>
-				<input class="form-control" name="email" type="text" />
+				<input class="form-control" name="nostafpel" type="text" />
 		</div>
 
 
@@ -132,14 +132,26 @@ if(isset($_POST['submit'])){
 
  <div class="form-group col-md-2">
 		<label>Bangsa:</label>
-			<select  class="form-control"  name='serial' class="inputOne"  id='serial' >
-				<option value="PA">Cina</option>
-				<option value="PB">India</option>
-				<option value="PB">Melayu</option>
-				<option value="PB">Lain-lain</option>
+			<select  class="form-control"  name='bangsa' class="inputOne"  id='serial' >
+				<option value="cina">Cina</option>
+				<option value="india">India</option>
+				<option value="Melayu">Melayu</option>
+				<option value="orang asli">Orang asli</option>
+				<option value="siam">Siam</option>
+				<option value="sabah">Suku kaum Sabah</option>
+				<option value="sarawak">Suku kaum Sarawak</option>
+				<option value="Lain-lain">Lain-lain</option>
 			</select>
 			</div>
 
+<div class="form-group col-md-3">
+		<label>No. Tel untuk dihubungi:</label>
+		
+			     <input  class="form-control" autocomplete="off" name='refcontact' id='age'  type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+   				 type = "number" maxlength = "20">
+					  <small id="emailHelp" class="form-text text-muted">*Jika berlaku kecemasan</small>
+      
+    </div>
 	
 
 </div>

@@ -16,7 +16,7 @@ function report_info($query,$id){
 }
 
 
-function register_patient($gender,$age,$serial,$name,$contact,$email,$weight,$profession,$ref_contact,$address){
+function register_patient($gender,$age,$kadp,$name,$notel,$email,$bangsa,$profession,$ref_contact,$nostafpel){
 	global $con;
 
 	$current_time=date('Y-m-d H:i:s');
@@ -26,24 +26,24 @@ function register_patient($gender,$age,$serial,$name,$contact,$email,$weight,$pr
 	$friendly_name= str_replace("",", ",$name);
 
 	if($name==""){return false;}
-	if($contact==""){$contact="n/a";}
-	if($email==""){$email="n/a";}
-	if($weight==""){$weight="n/a";}
-	if($profession==""){$profession="n/a";}
-	if($ref_contact==""){$ref_contact="n/a";}
-	if($address==""){$address="n/a";}
+	if($notel==""){$notel="Tiada";}
+	if($email==""){$email="Tiada";}
+	if($bangsa==""){$bangsa="Tiada Maklumat";}
+	if($profession==""){$profession="Tiada";}
+	if($ref_contact==""){$ref_contact="Tiada";}
+	if($nostafpel==""){$nostafpel="Tiada";}
 
 	mysqli_query($con, "insert into p_patients_dir set 
 		gender='$gender',
 		age='$age',
-		serial='$serial',		
+		kad_penga='$kadp',		
 		name='$name',		
-		contact='$contact',		
+		no_tel='$notel',		
 		email='$email',		
-		weight='$weight',		
+		bangsa='$bangsa',		
 		profession='$profession',		
 		ref_contact='$ref_contact',		
-		address='$address',		
+		no_staf_pel='$nostafpel',		
 		branch='$branch',
 		physician='$physician',
 		friendly_name='$friendly_name',
@@ -58,7 +58,7 @@ function register_patient($gender,$age,$serial,$name,$contact,$email,$weight,$pr
 }
 
 
-function edit_patient($id,$gender,$age,$serial,$name,$contact,$email,$weight,$profession,$ref_contact,$address){
+function edit_patient($id,$gender,$age,$kadp,$name,$contact,$email,$weight,$profession,$ref_contact,$address){
 	global $con;
 
 	$current_time=date('Y-m-d H:i:s');
@@ -78,7 +78,7 @@ function edit_patient($id,$gender,$age,$serial,$name,$contact,$email,$weight,$pr
 	mysqli_query($con, "update p_patients_dir set 
 		gender='$gender',
 		age='$age',
-		serial='$serial',		
+		kad_penga='$kadp',		
 		name='$name',		
 		contact='$contact',		
 		email='$email',		
@@ -210,7 +210,7 @@ function prescribe($report_id,$medicine,$doses,$timings,$days,$reply,$notes,$med
 				last_update='$current_time'
 			") or die(mysqli_error());
 
-		//deduct the medicine from the branch’s stock
+		//deduct the medicine from the branchï¿½s stock
 		$new_amount=$remaining_were-$total;
 			mysqli_query($con, "update p_stock set
 				remaining='$new_amount',

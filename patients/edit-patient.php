@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 	$id=$_GET['id'];
 	$gender=$_POST['gender'];
 	$age=$_POST['age'];
-	$serial=$_POST['serial'];
+	$kadp=$_POST['serial'];
 	$name=friendly($_POST['name']);
 	$contact=friendly($_POST['contact']);
 	$email=friendly($_POST['email']);
